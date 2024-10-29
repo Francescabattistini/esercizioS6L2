@@ -13,12 +13,12 @@ public class Blogpost {
     private String titolo;
     private String cover;
     private String contenuto;
-    private int tempoDiLetturo;
+    private int tempoDiLettura;
 
     public Blogpost(String categoria, String titolo, String contenuto, int tempoDiLetturo) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.contenuto = contenuto;
-        this.tempoDiLetturo = tempoDiLetturo;
+        this.tempoDiLettura = tempoDiLetturo;
     }
 }
