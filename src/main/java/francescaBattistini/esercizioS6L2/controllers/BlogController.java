@@ -4,6 +4,7 @@ import francescaBattistini.esercizioS6L2.entities.Blogpost;
 import francescaBattistini.esercizioS6L2.payloads.BlogPayload;
 import francescaBattistini.esercizioS6L2.services.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,7 +34,7 @@ public class BlogController {
 //2.post http://localhost:3002/blogpost(+paylod)
 
     @PostMapping
-
+    @ResponseStatus(HttpStatus.CREATED)//201
     public Blogpost createBlog(@RequestBody BlogPayload body){
 return this.blogservice.saveBlogPost(body);
     }
@@ -58,6 +59,7 @@ return this.blogservice.saveBlogPost(body);
 
   //5 DELETE http://localhost:3002/blogpost {blogID}
 @DeleteMapping("/{blogId}")
+@ResponseStatus(HttpStatus.NO_CONTENT)//204
     public void findBlogIdAndDelate(@PathVariable int blogId){
         this.blogservice.findByIdAndDelete(blogId);
 }
