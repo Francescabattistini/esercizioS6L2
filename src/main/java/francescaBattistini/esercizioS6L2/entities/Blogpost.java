@@ -7,7 +7,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Blog {
+public class Blogpost {
      private int id;
     private String categoria;
     private String titolo;
@@ -15,7 +15,7 @@ public class Blog {
     private String contenuto;
     private int tempoDiLetturo;
 
-    public Blog(String categoria, String titolo, String contenuto, int tempoDiLetturo) {
+    public Blogpost(String categoria, String titolo, String contenuto, int tempoDiLetturo) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.contenuto = contenuto;
