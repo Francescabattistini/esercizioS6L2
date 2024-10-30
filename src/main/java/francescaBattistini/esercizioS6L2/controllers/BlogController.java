@@ -34,7 +34,7 @@ public class BlogController {
 //2.post http://localhost:3002/blogpost(+paylod)
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)//201
+    @ResponseStatus(HttpStatus.CREATED)//201 per la risposta local
     public Blogpost createBlog(@RequestBody BlogPayload body){
 return this.blogservice.saveBlogPost(body);
     }
@@ -50,7 +50,7 @@ return this.blogservice.saveBlogPost(body);
 
     //4 PUT http://localhost:3002/blogpost {blogID} (+paylod)
    @PutMapping("/{blogId}")
-    public Blogpost findblogByIdAndUpdate(@PathVariable int blogId, BlogPayload body){
+    public Blogpost findblogByIdAndUpdate(@PathVariable int blogId, @RequestBody  BlogPayload body){
         return this.blogservice.findByIdAndUpdate(blogId,body);
    }
 

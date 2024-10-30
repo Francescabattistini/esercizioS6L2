@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @ToString
-public class AuthorPaylod {
+public class AuthorPayload {
     private  String nome;
     private   String cognome;
     private  String email;
